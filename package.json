@@ -1,6 +1,6 @@
 {
   "name": "darn-simple-audio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "drop-in CSS only HTML5 audio player",
   "main": "index.js",
   "source": "index.js",
