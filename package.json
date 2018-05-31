@@ -5,12 +5,18 @@
   "main": "index.js",
   "source": "index.js",
   "homepage": "https://github.com/var/darn-simple-audio",
+  "repository": "https://github.com/var/darn-simple-audio",
   "bugs": "https://github.com/var/darn-simple-audio/issues",
   "author": "Vimal Atreya Ramaka",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.1"
   },
+  "keywords": [
+    "react",
+    "audio",
+    "component"
+  ],
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
