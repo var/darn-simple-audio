@@ -1,0 +1,56 @@
+.darn-simple-audio {
+    display: flex;
+}
+
+.controlText {
+    cursor: pointer;
+    color: #fff;
+}
+
+.controls {
+    background: rgba(41, 23, 32, 0.8);
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: border-box;
+    background: rgba(41, 23, 32, 0.3);
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 20px 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: background .125s ease;
+    transition: background .125s ease;
+}
+
+.album-art {
+    background-size: cover;
+    position: relative;
+}
+
+.album-art {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 280px;
+    box-sizing: border-box;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 20px 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: background .125s ease;
+    transition: background .125s ease;
+}

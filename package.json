@@ -1,0 +1,18 @@
+{
+  "name": "darn-simple-audio",
+  "version": "0.0.2",
+  "description": "drop-in CSS only HTML5 audio player",
+  "main": "index.js",
+  "source": "index.js",
+  "homepage": "https://github.com/var/darn-simple-audio",
+  "bugs": "https://github.com/var/darn-simple-audio/issues",
+  "author": "Vimal Atreya Ramaka",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
