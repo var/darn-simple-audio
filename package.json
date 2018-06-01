@@ -15,7 +15,7 @@
     "component"
   ],
   "scripts": {
-    "dist": "babel src -d dist --copy-files && cp -rf package.json dist && cd dist && npm publish"
+    "dist": "babel src -d dist --copy-files && cp -rf package.json dist && cp -rf README.md dist && cd dist && npm publish"
   },
   "peerDependencies": {
     "react": "^16.4.0",
