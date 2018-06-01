@@ -2,7 +2,7 @@
   "name": "darn-simple-audio",
   "version": "0.1.7",
   "description": "drop-in CSS only HTML5 audio player",
-  "main": "dist/index.js",
+  "main": "index.js",
   "source": "src/index.js",
   "homepage": "https://github.com/var/darn-simple-audio",
   "repository": "https://github.com/var/darn-simple-audio",
@@ -15,7 +15,7 @@
     "component"
   ],
   "scripts": {
-    "prepublishOnly": "babel src -d dist --copy-files"
+    "dist": "babel src -d dist --copy-files && cp -rf package.json dist && cd dist && npm publish"
   },
   "peerDependencies": {
     "react": "^16.4.0",
