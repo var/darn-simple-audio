@@ -3,15 +3,12 @@
   "version": "0.1.2",
   "description": "drop-in CSS only HTML5 audio player",
   "main": "dist/index.js",
-  "source": "src/index.js",
+  "source": "index.js",
   "homepage": "https://github.com/var/darn-simple-audio",
   "repository": "https://github.com/var/darn-simple-audio",
   "bugs": "https://github.com/var/darn-simple-audio/issues",
   "author": "Vimal Atreya Ramaka",
   "license": "MIT",
-  "scripts": {
-    "prepublishOnly": "babel ./src --retain-lines -d ./dist --presets=es2015,react,stage-0"
-  },
   "keywords": [
     "react",
     "audio",
@@ -23,8 +20,12 @@
     "prop-types": "15.6.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-stage-0": "6.24.1"
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "@babel/preset-stage-0": "^7.0.0-beta.49",
+    "@babel/register": "^7.0.0-beta.49"
   }
 }

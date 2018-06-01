@@ -1,11 +1,11 @@
 {
     "plugins": [
-        "transform-class-properties",
-        "syntax-dynamic-import"
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties"
     ],
     "presets": [
-        "env",
-        "react",
-        "stage-0"
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-stage-0"
     ]
 }
