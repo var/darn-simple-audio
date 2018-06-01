@@ -29,11 +29,18 @@ class SingleAudioPlayer extends Component {
         this.setState({ totalDuration: e.target.duration });
     }
 
+    setEnded = (e) => {
+        if(e.target.ended){
+            this.setState({endReached: e.target.ended, playing: false});
+        }
+    }
+
+    setPlaying = () => {
+        this.setState({playing: true, endReached: false});
+    }
+
     setCurrentPlayTime = (e) => {
         this.setState({ currentPlayTime: e.target.currentTime });
-        if (this.state.totalDuration === e.target.currentTime) {
-            this.setState({ endReached: true, playing: false });
-        }
     }
 
     playAudio = () => {
@@ -44,8 +51,6 @@ class SingleAudioPlayer extends Component {
         let currentState = {...this.state};
         currentState.audioElement.currentTime = t;
         currentState.currentPlayTime = t;
-        currentState.playing = true;
-        currentState.endReached = false;
         this.setState(currentState, () => {
             if (this.state.audioElement.load) {
                 if (t === 0){
@@ -70,6 +75,7 @@ class SingleAudioPlayer extends Component {
     }
 
     render() {
+        console.log(this.state.audioElement.playing);
         return (
             <div className='darn-simple-audio-container' >
                 <div
@@ -88,6 +94,8 @@ class SingleAudioPlayer extends Component {
                         setTotalDuration={this.setTotalDuration}
                         play={this.playAudio} ended={this.setEnded}
                         setAudioElement={this.setAudioElement}
+                        setEnded={this.setEnded}
+                        setPlaying={this.setPlaying}
                         {...this.props}
                     />
                 </div>
