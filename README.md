@@ -27,19 +27,21 @@ export default App;
 
 ## SingleAudioPlayer
 
-| props        | type               | default  |
-|--------------|--------------------|----------|
-| autoPlay     | boolean            | true     |
-| showControls | boolean            | true     |
-| showReplay   | boolean            | true     |
-| showPause    | boolean            | true     |
-| width        | number             | 280      |
-| height       | number             | 280      |
-| source       | string             | ""       |
-| albumArt     | URL (string)       | ""       |
-| playIcon     | string / Component |          |
-| pauseIcon    | string / Component |          |
-| replayIcon   | string / Component |          |
+| props                 | type                    | default  |
+|-----------------------|-------------------------|----------|
+| autoPlay              | boolean                 | true     |
+| showControls          | boolean                 | true     |
+| showReplay            | boolean                 | true     |
+| showPause             | boolean                 | true     |
+| width                 | number / string         | 280      |
+| height                | number / string         | 280      |
+| source                | string                  | ""       |
+| albumArt              | URL (string)            | ""       |
+| playIcon              | string / func / element |          |
+| pauseIcon             | string / func / element |          |
+| replayIcon            | string / func / element |          |
+| onCurrentTimeChange   | func                    |          |
+| onTotalDurationChange | func                    |
 
 # Who's using it 
 * [Fluent.ai](https://fluent.ai)
