@@ -26,6 +26,9 @@ class SingleAudioPlayer extends Component {
     }
 
     setTotalDuration = (e) => {
+        if(this.props.onTotalDurationChange && typeof this.props.onTotalDurationChange === 'function'){
+            this.props.onTotalDurationChange(e.target.duration);
+        }
         this.setState({ totalDuration: e.target.duration });
     }
 
@@ -40,6 +43,9 @@ class SingleAudioPlayer extends Component {
     }
 
     setCurrentPlayTime = (e) => {
+        if(this.props.onCurrentTimeChange && typeof this.props.onCurrentTimeChange === 'function'){
+            this.props.onCurrentTimeChange(e.target.currentTime);
+        }
         this.setState({ currentPlayTime: e.target.currentTime });
     }
 
@@ -75,7 +81,6 @@ class SingleAudioPlayer extends Component {
     }
 
     render() {
-        console.log(this.state.audioElement.playing);
         return (
             <div className='darn-simple-audio-container' >
                 <div
@@ -132,13 +137,15 @@ SingleAudioPlayer.propTypes = {
     trackTile: PropTypes.string,
     source: PropTypes.string,
     albumArt: PropTypes.string,
-    width: PropTypes.number,
-    height: PropTypes.number,
-    prevIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    nextIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    playIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    pauseIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    replayIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    onCurrentTimeChange: PropTypes.func,
+    onTotalDurationChange: PropTypes.func,
+    prevIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.element]),
+    nextIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.element]),
+    playIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.element]),
+    pauseIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.element]),
+    replayIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.element]),
 }
 
 export default SingleAudioPlayer;
